@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="OFF">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <!-- Completely suppress TestNG logs -->
+        <Logger name="org.testng" level="OFF" additivity="false"/>
+        
+        <!-- Suppress Selenium logs -->
+        <Logger name="org.openqa.selenium" level="OFF" additivity="false"/>
+        
+        <!-- Suppress HTTP client logs -->
+        <Logger name="org.apache" level="OFF" additivity="false"/>
+        
+        <!-- Root logger with threshold filter -->
+        <Root level="INFO">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite configfailurepolicy="continue" name="Failed suite [Entrata Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="listner.MytestListners"/>
+  </listeners>
+  <test thread-count="5" name="Navigation Tests(failed)" verbose="0">
+    <classes>
+      <class name="Com.TestingFramwork.co.TestinfDDFramework.AppTest">
+        <methods>
+          <include name="Aftertest"/>
+          <include name="BeforeTest"/>
+          <include name="Testcase1"/>
+          <include name="BeforeMethod"/>
+          <include name="aftermethod"/>
+        </methods>
+      </class> <!-- Com.TestingFramwork.co.TestinfDDFramework.AppTest -->
+    </classes>
+  </test> <!-- Navigation Tests(failed) -->
+</suite> <!-- Failed suite [Entrata Test Suite] -->
