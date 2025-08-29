@@ -76,6 +76,7 @@ public class GenericKeyword {
 	        if (responcecode >=400) {
 				System.out.println("Broken URL :" + uRL + " || Responce COde :"+responcecode);
 				loginfo("Broken URL :" + uRL + " || Responce COde :"+responcecode) ;
+				System.out.println("This is just to chacnge this  ") ;
 			} 
 			
 		} catch (Exception e) {
@@ -84,11 +85,7 @@ public class GenericKeyword {
 		}
 	}
 }
-public void Click2(String locate) {
-	loginfo("Clicking on element: " + locate);
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-	wait.until(ExpectedConditions.elementToBeClickable(getlocater(locate))).click();
-}
+
  
   public void Click(String locate) {
 	    loginfo("Clicking on element: " + locate);
@@ -288,10 +285,7 @@ public void Click2(String locate) {
 			 return	selecting.getFirstSelectedOption().getText().trim() ;
 			
 		}
-		 public void compatetext(String a, String b) {
-			 softAssert.assertEquals(a, b) ;
-			
-		}
+		
 		 
 		public void takescreenshot() {
 		   String timing = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy_ss-mm-HH")) ;
@@ -306,6 +300,7 @@ public void Click2(String locate) {
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+				System.out.println("Unable to take the screenshot");
 			}
 		    test.log(Status.INFO, MarkupHelper.createLabel("Screenshot"	, null)) ; 
 		    test.log(Status.INFO, "<img src='" + destinationpath + "' height='100%' style='border:2px solid red'/>") ; 
