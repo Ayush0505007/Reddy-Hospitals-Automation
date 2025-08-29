@@ -285,10 +285,7 @@ public class GenericKeyword {
 			 return	selecting.getFirstSelectedOption().getText().trim() ;
 			
 		}
-		 public void compatetext(String a, String b) {
-			 softAssert.assertEquals(a, b) ;
-			
-		}
+		
 		 
 		public void takescreenshot() {
 		   String timing = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy_ss-mm-HH")) ;
@@ -303,6 +300,7 @@ public class GenericKeyword {
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+				System.out.println("Unable to take the screenshot");
 			}
 		    test.log(Status.INFO, MarkupHelper.createLabel("Screenshot"	, null)) ; 
 		    test.log(Status.INFO, "<img src='" + destinationpath + "' height='100%' style='border:2px solid red'/>") ; 
