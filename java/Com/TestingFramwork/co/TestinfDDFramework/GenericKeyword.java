@@ -84,6 +84,11 @@ public class GenericKeyword {
 		}
 	}
 }
+public void Click2(String locate) {
+	loginfo("Clicking on element: " + locate);
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	wait.until(ExpectedConditions.elementToBeClickable(getlocater(locate))).click();
+}
  
   public void Click(String locate) {
 	    loginfo("Clicking on element: " + locate);
